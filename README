@@ -1,0 +1,11 @@
+Utility which aids in the unique assignment of mnemonics for menus, buttons, etc.
+
+Provided a list of strings which require mnemonic assignment, the utility will:
+
+1.  Determine if enough unique characters exist to even proceed with attempting mnemonic assignment;
+
+2.  Attempt to determine mnemonic assignments, writing suggestions to disk when assignments are determined; and
+
+3.  Inform the user when unique mnemonic assignments do not exist.
+
+Unfortunately, the code does require a brute force approach for determining assignments.  However, the assignment operation is optimized by looking for the "difficult" letters first using a common scale of the relative frequency with which letters appear in the english language (i.e. Scrabble weights).
